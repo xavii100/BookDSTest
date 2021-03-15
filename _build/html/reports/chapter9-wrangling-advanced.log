@@ -1,0 +1,51 @@
+Traceback (most recent call last):
+  File "/home/xavi/Documentos/PythonProjects/RepasoUnam/MyDevEnv/lib/python3.8/site-packages/jupyter_cache/executors/utils.py", line 51, in single_nb_execution
+    executenb(
+  File "/home/xavi/Documentos/PythonProjects/RepasoUnam/MyDevEnv/lib/python3.8/site-packages/nbclient/client.py", line 1112, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "/home/xavi/Documentos/PythonProjects/RepasoUnam/MyDevEnv/lib/python3.8/site-packages/nbclient/util.py", line 74, in wrapped
+    return just_run(coro(*args, **kwargs))
+  File "/home/xavi/Documentos/PythonProjects/RepasoUnam/MyDevEnv/lib/python3.8/site-packages/nbclient/util.py", line 53, in just_run
+    return loop.run_until_complete(coro)
+  File "/usr/lib/python3.8/asyncio/base_events.py", line 616, in run_until_complete
+    return future.result()
+  File "/home/xavi/Documentos/PythonProjects/RepasoUnam/MyDevEnv/lib/python3.8/site-packages/nbclient/client.py", line 553, in async_execute
+    await self.async_execute_cell(
+  File "/home/xavi/Documentos/PythonProjects/RepasoUnam/MyDevEnv/lib/python3.8/site-packages/nbclient/client.py", line 857, in async_execute_cell
+    self._check_raise_for_error(cell, exec_reply)
+  File "/home/xavi/Documentos/PythonProjects/RepasoUnam/MyDevEnv/lib/python3.8/site-packages/nbclient/client.py", line 760, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+df['Distance'].plot.line();
+------------------
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mImportError[0m                               Traceback (most recent call last)
+[0;32m<ipython-input-104-94e6fb14c0cf>[0m in [0;36m<module>[0;34m[0m
+[0;32m----> 1[0;31m [0mdf[0m[0;34m[[0m[0;34m'Distance'[0m[0;34m][0m[0;34m.[0m[0mplot[0m[0;34m.[0m[0mline[0m[0;34m([0m[0;34m)[0m[0;34m;[0m[0;34m[0m[0;34m[0m[0m
+[0m
+[0;32m~/Documentos/PythonProjects/RepasoUnam/MyDevEnv/lib/python3.8/site-packages/pandas/plotting/_core.py[0m in [0;36mline[0;34m(self, x, y, **kwargs)[0m
+[1;32m   1021[0m         [0;32mas[0m [0mcoordinates[0m[0;34m.[0m[0;34m[0m[0;34m[0m[0m
+[1;32m   1022[0m         """
+[0;32m-> 1023[0;31m         [0;32mreturn[0m [0mself[0m[0;34m([0m[0mkind[0m[0;34m=[0m[0;34m"line"[0m[0;34m,[0m [0mx[0m[0;34m=[0m[0mx[0m[0;34m,[0m [0my[0m[0;34m=[0m[0my[0m[0;34m,[0m [0;34m**[0m[0mkwargs[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m   1024[0m [0;34m[0m[0m
+[1;32m   1025[0m     @Appender(
+
+[0;32m~/Documentos/PythonProjects/RepasoUnam/MyDevEnv/lib/python3.8/site-packages/pandas/plotting/_core.py[0m in [0;36m__call__[0;34m(self, *args, **kwargs)[0m
+[1;32m    873[0m [0;34m[0m[0m
+[1;32m    874[0m     [0;32mdef[0m [0m__call__[0m[0;34m([0m[0mself[0m[0;34m,[0m [0;34m*[0m[0margs[0m[0;34m,[0m [0;34m**[0m[0mkwargs[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 875[0;31m         [0mplot_backend[0m [0;34m=[0m [0m_get_plot_backend[0m[0;34m([0m[0mkwargs[0m[0;34m.[0m[0mpop[0m[0;34m([0m[0;34m"backend"[0m[0;34m,[0m [0;32mNone[0m[0;34m)[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    876[0m [0;34m[0m[0m
+[1;32m    877[0m         x, y, kind, kwargs = self._get_call_args(
+
+[0;32m~/Documentos/PythonProjects/RepasoUnam/MyDevEnv/lib/python3.8/site-packages/pandas/plotting/_core.py[0m in [0;36m_get_plot_backend[0;34m(backend)[0m
+[1;32m   1784[0m             [0;32mimport[0m [0mpandas[0m[0;34m.[0m[0mplotting[0m[0;34m.[0m[0m_matplotlib[0m [0;32mas[0m [0mmodule[0m[0;34m[0m[0;34m[0m[0m
+[1;32m   1785[0m         [0;32mexcept[0m [0mImportError[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m-> 1786[0;31m             raise ImportError(
+[0m[1;32m   1787[0m                 [0;34m"matplotlib is required for plotting when the "[0m[0;34m[0m[0;34m[0m[0m
+[1;32m   1788[0m                 [0;34m'default backend "matplotlib" is selected.'[0m[0;34m[0m[0;34m[0m[0m
+
+[0;31mImportError[0m: matplotlib is required for plotting when the default backend "matplotlib" is selected.
+ImportError: matplotlib is required for plotting when the default backend "matplotlib" is selected.
+
