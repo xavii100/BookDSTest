@@ -1,0 +1,580 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Analysis &#8212; Prueba de Construccion de Book</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e7340bb3dbd8dde6db86f25597f54a1b.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Chapter 2: Loops &amp; Functions" href="chapter2-loops-functions.html" />
+    <link rel="prev" title="Python Programming for Data Science/ Prueba de como construir un Book" href="../README.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Prueba de Construccion de Book</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../README.html">
+   Python Programming for Data Science/ Prueba de como construir un Book
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Capítulos
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   <em>
+    Analysis
+   </em>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="#what-is-algorithm-analysis">
+   3.2. What Is Algorithm Analysis?
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="#big-o-notation">
+   3.3. Big-O Notation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapter2-loops-functions.html">
+   Chapter 2: Loops &amp; Functions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapter3-tests-classes.html">
+   Chapter 3: Unit Tests &amp; Classes
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Ejercicios de Practica
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../practice-exercises/Algoritmos.html">
+   <em>
+    Analysis
+   </em>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../practice-exercises/Algoritmos.html#what-is-algorithm-analysis">
+   3.2. What Is Algorithm Analysis?
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../practice-exercises/Algoritmos.html#big-o-notation">
+   3.3. Big-O Notation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../practice-exercises/chapter2-loops-functions-practice.html">
+   Loops &amp; Functions
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  <a href="https://www.google.com/">GOOGLE</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/chapters/Algoritmos.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/xavii100/BookDSTest"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        
+        
+    </div>
+</div>
+
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                    title="Fullscreen mode"><i
+                        class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/xavii100/BookDSTest/main?urlpath=tree/chapters/Algoritmos.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i>
+            Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   <em>
+    Analysis
+   </em>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#objectives">
+     3.1. Objectives
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-is-algorithm-analysis">
+   3.2. What Is Algorithm Analysis?
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#big-o-notation">
+   3.3. Big-O Notation
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#common-functions-for-big-o">
+     Common Functions for Big-O
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#graphs-of-the-common-functions">
+     Graphs of the common functions
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#another-example">
+     <strong>
+      Another example
+     </strong>
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#comparing-t-n-with-common-big-o-functions">
+     Comparing T(n) with Common Big-O Functions
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+        
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="analysis">
+<h1><em>Analysis</em><a class="headerlink" href="#analysis" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p>3.1. Objectives</p></li>
+<li><p>3.2. What Is Algorithm Analysis?</p></li>
+<li><p>3.3. Big-O Notation</p></li>
+<li><p>3.4. An Anagram Detection Example</p></li>
+<li><p>3.4.1. Solution 1: Checking Off</p></li>
+<li><p>3.4.2. Solution 2: Sort and Compare</p></li>
+<li><p>3.4.3. Solution 3: Brute Force</p></li>
+<li><p>3.4.4. Solution 4: Count and Compare</p></li>
+<li><p>3.5. Performance of Python Data Structures</p></li>
+<li><p>3.6. Lists</p></li>
+<li><p>3.7. Dictionaries</p></li>
+<li><p>3.8. Summary</p></li>
+<li><p>3.9. Key Terms</p></li>
+<li><p>3.10. Discussion Questions</p></li>
+<li><p>3.11. Programming Exercises</p></li>
+</ul>
+<hr class="docutils" />
+<div class="section" id="objectives">
+<h2>3.1. Objectives<a class="headerlink" href="#objectives" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>To understand why algorithm analysis is important.</p></li>
+<li><p>To be able to use “Big-O” to describe execution time.</p></li>
+<li><p>To understand the “Big-O” execution time of common operations on Python lists and dictionaries.</p></li>
+<li><p>To understand how the implementation of Python data impacts algorithm analysis.</p></li>
+<li><p>To understand how to benchmark simple Python programs.</p></li>
+</ul>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="what-is-algorithm-analysis">
+<h1>3.2. What Is Algorithm Analysis?<a class="headerlink" href="#what-is-algorithm-analysis" title="Permalink to this headline">¶</a></h1>
+<p>Algorithm analysis is concerned with comparing algorithms based upon the amount of computing resources that each algorithm uses.</p>
+<p>At this point, it is important to think more about what we really mean by computing resources. There are two different ways to look at this. One way is to consider the amount of space or memory an algorithm requires to solve the problem. The amount of space required by a problem solution is typically dictated by the problem instance itself. Every so often, however, there are algorithms that have very specific space requirements, and in those cases we will be very careful to explain the variations.</p>
+<p>As an alternative to space requirements, we can analyze and compare algorithms based on the amount of time they require to execute. This measure is sometimes referred to as the “execution time” or “running time” of the algorithm.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">time</span>
+
+
+<span class="k">def</span> <span class="nf">sum_of_n</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">start</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+    <span class="n">the_sum</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="n">the_sum</span> <span class="o">=</span> <span class="n">the_sum</span> <span class="o">+</span> <span class="n">i</span>
+    <span class="n">end</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">the_sum</span><span class="p">,</span> <span class="n">end</span> <span class="o">-</span> <span class="n">start</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">sum_of_n</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(55, 0.0)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Sum is </span><span class="si">%d</span><span class="s2"> required </span><span class="si">%10.7f</span><span class="s2"> seconds&quot;</span> <span class="o">%</span> <span class="n">sum_of_n</span><span class="p">(</span><span class="mi">1000000</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sum is 500000500000 required  0.0350914 seconds
+Sum is 500000500000 required  0.0488017 seconds
+Sum is 500000500000 required  0.0468316 seconds
+Sum is 500000500000 required  0.0312500 seconds
+Sum is 500000500000 required  0.0469174 seconds
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sum_of_n_3</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">start</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="p">(</span><span class="n">n</span> <span class="o">*</span> <span class="p">(</span><span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span> <span class="o">/</span> <span class="mi">2</span>
+    <span class="n">end</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">result</span><span class="p">,</span> <span class="n">end</span> <span class="o">-</span><span class="n">start</span> 
+
+
+<span class="nb">print</span><span class="p">(</span><span class="n">sum_of_n_3</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(55.0, 0.0)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">10000</span><span class="p">,</span><span class="mi">100000</span><span class="p">,</span><span class="mi">1000000</span><span class="p">,</span><span class="mi">10000000</span><span class="p">,</span><span class="mi">100000000</span><span class="p">]:</span>
+     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Sum is </span><span class="si">%d</span><span class="s2"> required </span><span class="si">%10.7f</span><span class="s2"> seconds&quot;</span> <span class="o">%</span> <span class="n">sum_of_n</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sum is 50005000 required  0.0010002 seconds
+Sum is 5000050000 required  0.0060008 seconds
+Sum is 500000500000 required  0.0548244 seconds
+Sum is 50000005000000 required  0.6889658 seconds
+Sum is 5000000050000000 required  6.8096163 seconds
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">10000</span><span class="p">,</span><span class="mi">100000</span><span class="p">,</span><span class="mi">1000000</span><span class="p">,</span><span class="mi">10000000</span><span class="p">,</span><span class="mi">100000000</span><span class="p">]:</span>
+     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Sum is </span><span class="si">%d</span><span class="s2"> required </span><span class="si">%10.7f</span><span class="s2"> seconds&quot;</span> <span class="o">%</span> <span class="n">sum_of_n_3</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sum is 50005000 required  0.0000000 seconds
+Sum is 5000050000 required  0.0000000 seconds
+Sum is 500000500000 required  0.0000000 seconds
+Sum is 50000005000000 required  0.0000000 seconds
+Sum is 5000000050000000 required  0.0000000 seconds
+</pre></div>
+</div>
+</div>
+</div>
+<p>There are two important things to notice about this output. First, the times recorded above are shorter than any of the previous examples. Second, they are very consistent no matter what the value of n. It appears that sum_of_n_3 is hardly impacted by the number of integers being added.</p>
+<p>We need a better way to characterize these algorithms with respect to execution time. The benchmark technique computes the actual time to execute. It does not really provide us with a useful measurement, because it is dependent on a particular machine, program, time of day, compiler, and programming language. Instead, we would like to have a characterization that is independent of the program or computer being used. This measure would then be useful for judging the algorithm alone and could be used to compare algorithms across implementations.</p>
+<p><em>En resumen podemos decir que el analisis de algoritmos Es el proceso o tecnica que nos ayuda a comparar algoritmos en función de la cantidad de recursos informáticos(tiempo y espacio en memoria) que utiliza cada uno de ellos y asi obtener el mas eficiente para resolver cierto problema</em></p>
+</div>
+<hr class="docutils" />
+<div class="section" id="big-o-notation">
+<h1>3.3. Big-O Notation<a class="headerlink" href="#big-o-notation" title="Permalink to this headline">¶</a></h1>
+<p>When trying to characterize an algorithm’s efficiency in terms of execution time, independent of any particular program or computer, it is important to quantify the number of operations or steps that the algorithm will require. If each of these steps is considered to be a basic unit of computation, then the execution time for an algorithm can be expressed as the number of steps required to solve the problem. Deciding on an appropriate basic unit of computation can be a complicated problem and will depend on how the algorithm is implemented.</p>
+<p><code class="docutils literal notranslate"><span class="pre">A</span> <span class="pre">good</span> <span class="pre">basic</span> <span class="pre">unit</span> <span class="pre">of</span> <span class="pre">computation</span> <span class="pre">for</span> <span class="pre">comparing</span> <span class="pre">the</span> <span class="pre">summation</span> <span class="pre">algorithms</span> <span class="pre">shown</span> <span class="pre">earlier</span> <span class="pre">might</span> <span class="pre">be</span> <span class="pre">to</span> <span class="pre">count</span> <span class="pre">the</span> <span class="pre">number</span> <span class="pre">of</span> <span class="pre">assignment</span> <span class="pre">statements</span> <span class="pre">performed</span> <span class="pre">to</span> <span class="pre">compute</span> <span class="pre">the</span> <span class="pre">sum.</span></code> In the function sum_of_n, the number of assignment statements is 1 (the_sum=0) plus the value of n (the number of times we perform the_sum=the_sum+i). We can denote this by a function, call it T, where T(n)=1+n. The parameter n is often referred to as the “size of the problem,” and we can read this as “T(n) is the time it takes to solve a problem of size n, namely 1 + n steps.”</p>
+<p>In the summation functions given above, it makes sense to use the number of terms in the summation to denote the size of the problem. <code class="docutils literal notranslate"><span class="pre">We</span> <span class="pre">can</span> <span class="pre">then</span> <span class="pre">say</span> <span class="pre">that</span> <span class="pre">the</span> <span class="pre">sum</span> <span class="pre">of</span> <span class="pre">the</span> <span class="pre">first</span> <span class="pre">100,000</span> <span class="pre">integers</span> <span class="pre">is</span> <span class="pre">a</span> <span class="pre">bigger</span> <span class="pre">instance</span> <span class="pre">of</span> <span class="pre">the</span> <span class="pre">summation</span> <span class="pre">problem</span> <span class="pre">than</span> <span class="pre">the</span> <span class="pre">sum</span> <span class="pre">of</span> <span class="pre">the</span> <span class="pre">first</span> <span class="pre">1,000.</span></code> Because of this, it might seem reasonable that the time required to solve the larger case would be greater than for the smaller case. <code class="docutils literal notranslate"><span class="pre">Our</span> <span class="pre">goal</span> <span class="pre">then</span> <span class="pre">is</span> <span class="pre">to</span> <span class="pre">show</span> <span class="pre">how</span> <span class="pre">the</span> <span class="pre">algorithm’s</span> <span class="pre">execution</span> <span class="pre">time</span> <span class="pre">changes</span> <span class="pre">with</span> <span class="pre">respect</span> <span class="pre">to</span> <span class="pre">the</span> <span class="pre">size</span> <span class="pre">of</span> <span class="pre">the</span> <span class="pre">problem.</span></code></p>
+<p>Computer scientists prefer to take this analysis technique one step further. <code class="docutils literal notranslate"><span class="pre">It</span> <span class="pre">turns</span> <span class="pre">out</span> <span class="pre">that</span> <span class="pre">the</span> <span class="pre">exact</span> <span class="pre">number</span> <span class="pre">of</span> <span class="pre">operations</span> <span class="pre">is</span> <span class="pre">not</span> <span class="pre">as</span> <span class="pre">important</span> <span class="pre">as</span> <span class="pre">determining</span> <span class="pre">the</span> <span class="pre">most</span> <span class="pre">dominant</span> <span class="pre">part</span> <span class="pre">of</span> <span class="pre">the</span> <span class="pre">T(n)</span> <span class="pre">function.</span></code> In other words, as the problem gets larger, some portion of the T(n) function tends to overpower(dominar) the rest. <code class="docutils literal notranslate"><span class="pre">This</span> <span class="pre">dominant</span> <span class="pre">term</span> <span class="pre">is</span> <span class="pre">what,</span> <span class="pre">in</span> <span class="pre">the</span> <span class="pre">end,</span> <span class="pre">is</span> <span class="pre">used</span> <span class="pre">for</span> <span class="pre">comparison.</span> <span class="pre">The</span> <span class="pre">order</span> <span class="pre">of</span> <span class="pre">magnitude</span> <span class="pre">function</span> <span class="pre">describes</span> <span class="pre">the</span> <span class="pre">part</span> <span class="pre">of</span> <span class="pre">T(n)</span> <span class="pre">that</span> <span class="pre">increases</span> <span class="pre">the</span> <span class="pre">fastest</span> <span class="pre">as</span> <span class="pre">the</span> <span class="pre">value</span> <span class="pre">of</span> <span class="pre">n</span> <span class="pre">increases.</span> <span class="pre">Order</span> <span class="pre">of</span> <span class="pre">magnitude</span> <span class="pre">is</span> <span class="pre">often</span> <span class="pre">called</span> <span class="pre">Big-O</span> <span class="pre">notation</span> <span class="pre">(for</span> <span class="pre">“order”)</span> <span class="pre">and</span> <span class="pre">written</span> <span class="pre">as</span> <span class="pre">O(f(n)).</span> <span class="pre">It</span> <span class="pre">provides</span> <span class="pre">a</span> <span class="pre">useful</span> <span class="pre">approximation</span> <span class="pre">to</span> <span class="pre">the</span> <span class="pre">actual</span> <span class="pre">number</span> <span class="pre">of</span> <span class="pre">steps</span> <span class="pre">in</span> <span class="pre">the</span> <span class="pre">computation.</span> <span class="pre">The</span> <span class="pre">function</span> <span class="pre">f(n)</span> <span class="pre">provides</span> <span class="pre">a</span> <span class="pre">simple</span> <span class="pre">representation</span> <span class="pre">of</span> <span class="pre">the</span> <span class="pre">dominant</span> <span class="pre">part</span> <span class="pre">of</span> <span class="pre">the</span> <span class="pre">original</span> <span class="pre">T(n).</span></code></p>
+<p>In the above example, T(n)=1+n. <code class="docutils literal notranslate"><span class="pre">As</span> <span class="pre">n</span> <span class="pre">gets</span> <span class="pre">large,</span> <span class="pre">the</span> <span class="pre">constant</span> <span class="pre">1</span> <span class="pre">will</span> <span class="pre">become</span> <span class="pre">less</span> <span class="pre">and</span> <span class="pre">less</span> <span class="pre">significant</span> <span class="pre">to</span> <span class="pre">the</span> <span class="pre">final</span> <span class="pre">result.</span></code> If we are looking for an approximation for T(n), then we can drop the 1 and simply say that <code class="docutils literal notranslate"><span class="pre">the</span> <span class="pre">running</span> <span class="pre">time</span> <span class="pre">is</span> <span class="pre">O(n).</span></code> It is important to note that the 1 is certainly significant for T(n). <code class="docutils literal notranslate"><span class="pre">However,</span> <span class="pre">as</span> <span class="pre">n</span> <span class="pre">gets</span> <span class="pre">large,</span> <span class="pre">our</span> <span class="pre">approximation</span> <span class="pre">will</span> <span class="pre">be</span> <span class="pre">just</span> <span class="pre">as</span> <span class="pre">accurate</span> <span class="pre">without</span> <span class="pre">it.</span></code></p>
+<p>As another example, suppose that for some algorithm, the exact number of steps is T(n)=5n2+27n+1005. When n is small, say 1 or 2, the constant 1005 seems to be the dominant part of the function. However, as n gets larger, the n2 term becomes the most important. In fact, when n is really large, the other two terms become insignificant in the role that they play in determining the final result. Again, to approximate T(n) as n gets large, we can ignore the other terms and focus on 5n2. In addition, the coefficient 5 becomes insignificant as n gets large. We would say then that the function T(n) has an order of magnitude f(n)=n2, or simply that it is O(n2).</p>
+<p>A number of very common order of magnitude functions will come up over and over as you study algorithms. In order to decide which of these functions is the dominant part of any T(n) function, we must see how they compare with one another as n gets large.</p>
+<hr class="docutils" />
+<div class="section" id="common-functions-for-big-o">
+<h2>Common Functions for Big-O<a class="headerlink" href="#common-functions-for-big-o" title="Permalink to this headline">¶</a></h2>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>f(n)</p></th>
+<th class="head"><p>Name</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>Constant</p></td>
+</tr>
+<tr class="row-odd"><td><p>log <strong><em>n</em></strong></p></td>
+<td><p>Logarithmic</p></td>
+</tr>
+<tr class="row-even"><td><p><strong><em>n</em></strong></p></td>
+<td><p>Linear</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong><em>n</em></strong> log <strong><em>n</em></strong></p></td>
+<td><p>Log Linear</p></td>
+</tr>
+<tr class="row-even"><td><p><strong><em>n^2</em></strong></p></td>
+<td><p>Quadratic</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong><em>n^3</em></strong></p></td>
+<td><p>Cubic</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>2^<em>n</em></strong></p></td>
+<td><p>Exponential</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="docutils" />
+<div class="section" id="graphs-of-the-common-functions">
+<h2>Graphs of the common functions<a class="headerlink" href="#graphs-of-the-common-functions" title="Permalink to this headline">¶</a></h2>
+<p>Notice that when n is small, the functions are not very well defined with respect to one another. It is hard to tell which is dominant. However, as n grows, there is a definite relationship and it is easy to see how they compare with one another.</p>
+<img src="attachment:7feed387-ad18-46ab-9236-773caf3fdf34.png" width="40%"/></div>
+<div class="section" id="another-example">
+<h2><strong>Another example</strong><a class="headerlink" href="#another-example" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">6</span>
+<span class="n">c</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">i</span> <span class="o">*</span> <span class="n">i</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="n">j</span> <span class="o">*</span> <span class="n">j</span>
+        <span class="n">z</span> <span class="o">=</span> <span class="n">i</span> <span class="o">*</span> <span class="n">j</span>
+<span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">w</span> <span class="o">=</span> <span class="n">a</span> <span class="o">*</span> <span class="n">k</span> <span class="o">+</span> <span class="mi">45</span>
+    <span class="n">v</span> <span class="o">=</span> <span class="n">b</span> <span class="o">*</span> <span class="n">b</span>
+<span class="n">d</span> <span class="o">=</span> <span class="mi">33</span>
+</pre></div>
+</div>
+<p>The number of assignment operations is the sum of four terms. The first term is the constant 3, representing the three assignment statements at the start of the fragment. The second term is 3n^2, since there are three statements that are performed n^2 times due to the nested iteration. The third term is 2n, two statements iterated n times. Finally, the fourth term is the constant 1, representing the final assignment statement. This gives us T(n)=3+3n^2+2n+1=3n^2+2n+4. By looking at the exponents, we can easily see that the n^2 term will be dominant and therefore this fragment of code is O(n^2). Note that all of the other terms as well as the coefficient on the dominant term can be ignored as n grows larger.</p>
+</div>
+<div class="section" id="comparing-t-n-with-common-big-o-functions">
+<h2>Comparing T(n) with Common Big-O Functions<a class="headerlink" href="#comparing-t-n-with-common-big-o-functions" title="Permalink to this headline">¶</a></h2>
+<img src="attachment:bbacff2c-1f9c-4708-b88f-e0b3cc9b0ede.png" width="40%"/><p>the figure above shows a few of the common Big-O functions as they compare with the T(n) function discussed above. Note that T(n) is initially larger than the cubic function. However, as n grows, the cubic function quickly overtakes T(n). It is easy to see that T(n) then follows the quadratic function as n continues to grow.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./chapters"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="../README.html" title="previous page">Python Programming for Data Science/ Prueba de como construir un Book</a>
+    <a class='right-next' id="next-link" href="chapter2-loops-functions.html" title="next page">Chapter 2: Loops &amp; Functions</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Javier Reyes<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+  </body>
+</html>
